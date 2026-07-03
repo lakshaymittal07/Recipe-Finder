@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>🍴 Recipe App</h1>
+    
+    <!-- Cuisine Selection -->
+    <div id="cuisine-selection" class="screen">
+      <h2>Select a Cuisine</h2>
+      <div class="options">
+        <button onclick="selectCuisine('Indian')">Indian</button>
+        <button onclick="selectCuisine('Italian')">Italian</button>
+        <button onclick="selectCuisine('Chinese')">Chinese</button>
+        <button onclick="selectCuisine('Thai')">Thai</button>
+      </div>
+    </div>
+
+    <!-- Dish Options -->
+    <div id="dish-selection" class="screen hidden">
+      <h2 id="dish-title"></h2>
+      <div id="dish-options" class="options"></div>
+    </div>
+
+    <!-- Recipe Detail -->
+    <div id="recipe-detail" class="screen hidden">
+      <h2 id="recipe-name"></h2>
+      <p><strong>Prep Time:</strong> <span id="prep-time"></span></p>
+      <p><strong>Cook Time:</strong> <span id="cook-time"></span></p>
+      <h3>Ingredients</h3>
+      <ul id="ingredients"></ul>
+      <h3>Steps</h3>
+      <ol id="steps"></ol>
+      <button onclick="goBack()">⬅ Back</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
